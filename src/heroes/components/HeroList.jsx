@@ -10,21 +10,21 @@ export const HeroList = ({ publisher }) => {
       {Heroes.map((hero) => (
         <div key={hero.id} className="col mt-4 animate__animated animate__jackInTheBox">
           <div
-            className="card align-items-center p-2 bg-warning border border-4 border-dark"
+            className="card align-items-center p-2 bg-secondary border border-3 border-dark"
             style={{ minwidth: "200px" }}
           >
             <img
               src={hero.url}
-              className="card-img-top rounded-circle border border-5 border-muted"
+              className="card-img-top rounded-circle border border-2 border-danger"
               alt={hero.superhero}
             />
             <div className="card-body text-center">
-              <h5 className="card-title text-black">Name: {hero.superhero}</h5>
-              <p className="card-subtitle  text-muted ">
-                Alter ego: {hero.alter_ego}
+              <h5 className="card-title text-light">{hero.superhero}</h5>
+              <p className="card-subtitle  text-dark ">
+                {hero.alter_ego}
               </p>
 
-              <Link to={`/hero/${hero.id}`} className="btn btn-primary btn-sm mt-1">
+              <Link to={`/hero/${hero.id}`} className="btn btn-danger btn-sm mt-1">
                 More...
               </Link>
             </div>
