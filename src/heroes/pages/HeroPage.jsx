@@ -24,10 +24,6 @@ export const HeroPage = () => {
           className="card-img-top mt-4 img-thumbnail bg-danger border border-4 border-dark"
           alt="..."
         />
-        {/* <div className="card-body">
-          <h5 className="card-title">First appearance</h5>
-          <p className="card-text text-light">{hero.first_appearance}</p>
-        </div> */}
         <ul className="list-group list-group-flush border border-2 border-dark mt-4">
           <li className="list-group-item bg-dark text-light">
             <b className="text-danger">Name:</b> {hero.superhero}
