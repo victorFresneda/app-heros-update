@@ -17,7 +17,7 @@ export const SearchPage = () => {
 
   const onSearchSubmit = (event) => {
     event.preventDefault();
-    if (searchText.trim().length <= 1) return;
+    // if (searchText.trim().length <= 1) return;
 
     navigate(`?q=${searchText}`);
   };
@@ -49,9 +49,13 @@ export const SearchPage = () => {
         <div className="col-7">
           <h4>Results</h4>
           <hr />
-          <div className="alert alert-primary">Search a hero</div>
+          <div className="alert alert-primary animate__animated animate__flipInX" 
+            style={{display: q !== '' ? 'none' : ''}}>
+            Search a hero
+          </div>
 
-          <div className="alert alert-danger">
+          <div className="alert alert-danger animate__animated animate__flipInX" 
+            style={{display: q.length > 0 && heros.length === 0? '' : 'none'}}>
             No hero wirh <b>{q}</b>
           </div>
 
