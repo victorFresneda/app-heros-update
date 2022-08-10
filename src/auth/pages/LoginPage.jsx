@@ -1,11 +1,15 @@
+import { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { AuthContext } from '../context/AuthContext';
 
 export const LoginPage = () => {
 
-
+  const {login} = useContext( AuthContext)
   const navigate = useNavigate();
 
-    const onMarvel = () => {
+    const onLogin = () => {
+
+      login( 'Victor Fresneda');
         navigate('/', {
             replace: true
         });
@@ -37,7 +41,7 @@ export const LoginPage = () => {
 
               <p className="small mb-5 pb-lg-2"><a className="text-white-50" href="#!">Forgot password?</a></p>
 
-              <button className="btn btn-outline-light btn-lg px-5" type="submit" onClick={onMarvel}>Login</button>
+              <button className="btn btn-outline-light btn-lg px-5" type="submit" onClick={onLogin}>Login</button>
 
               <div className="d-flex justify-content-center text-center mt-4 pt-1">
                 <a href="#!" className="text-white"><i className="bi bi-facebook"></i></a>
